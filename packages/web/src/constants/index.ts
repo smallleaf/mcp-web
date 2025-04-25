@@ -7,7 +7,7 @@ export enum Role {
 }
 
 export const DEFAULT_TITLE = 'Untitled'
-export const DEFAULT_SYSTEM_MESSAGE = 'You are a helpful assistant.'
+export const DEFAULT_SYSTEM_MESSAGE = '您好，我是您的智能导购助手，您可以输入您想要的商品，和素材，我会为您提供相关的商品和素材。'
 
 export const ANT_CHAT_STRUCTURE = {
   type: 'Ant Chat',

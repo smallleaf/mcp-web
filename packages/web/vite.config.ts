@@ -53,6 +53,11 @@ export default defineConfig(({ command, mode }) => {
   }
 
   return {
+    server: {
+      host: '0.0.0.0',  // 允许所有网络接口访问
+      port: 5173,       // 默认端口
+      strictPort: true   // 如果端口被占用直接退出
+    },
     plugins,
     resolve: {
       alias: {

@@ -39,12 +39,12 @@ interface ModelConfigInitialState {
 }
 
 const initialState: ModelConfigInitialState = {
-  active: 'Gemini' as ModelConfigId,
+  active: 'OpenAI' as ModelConfigId,
   openSettingsModal: false,
   configMapping: {
     Gemini: createModelConfig({ id: 'Gemini' as ModelConfigId, name: 'Gemini', apiHost: 'https://generativelanguage.googleapis.com/v1beta' }),
     DeepSeek: createModelConfig({ id: 'DeepSeek' as ModelConfigId, name: 'DeepSeek', apiHost: 'https://api.deepseek.com' }),
-    OpenAI: createModelConfig({ id: 'OpenAI' as ModelConfigId, name: 'OpenAI', apiHost: 'https://api.openai.com' }),
+    OpenAI: createModelConfig({ id: 'OpenAI' as ModelConfigId, name: 'OpenAI', apiHost: 'https://uat01.gzmiyuan.com/gw/mcp/v1',apiKey:'test',model:'gpt-3.5-turbo' }),
   },
   systemMessage: DEFAULT_SYSTEM_MESSAGE,
 }
@@ -134,6 +134,7 @@ export function getActiveModelConfig() {
 
 export function checkModelConfig() {
   const { configMapping, active } = useModelConfigStore.getState()
+  console.log('configMapping', configMapping)
   const modelConfig = configMapping[active]
   if (!modelConfig) {
     return { ok: false, errMsg: `${active} 配置不存在` }

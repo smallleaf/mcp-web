@@ -24,6 +24,7 @@ import DarkButton from '../DarkButton'
 import { InfiniteScroll } from '../InfiniteScroll'
 import Loading from '../Loading'
 import { VersionButton } from '../Version'
+import { Mcp } from '../mcp'
 
 const RenameModal = lazy(() => import('./RenameModal'))
 
@@ -175,6 +176,7 @@ export default function ConversationsManage() {
         />
       </InfiniteScroll>
       <div className="footer border-t-solid border-1px border-black/10 dark:border-white/40 flex flex-col gap-1 px-1 py-2">
+        <Mcp/>
         <DarkButton />
         <Settings />
         <VersionButton />

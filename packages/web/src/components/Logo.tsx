@@ -17,12 +17,12 @@ export function Logo({ show, onChange }: LogoProps) {
       />
 
       <div className="w-7 h-7">
-        <img src="/logo.svg" alt="logo" className="w-full h-full" draggable={false} />
+        <img src="/logo.png" alt="logo" className="w-full h-full" draggable={false} />
       </div>
       <div
         className="text-5 line-height-32px"
       >
-        Ant Chat
+        蜜源AI
       </div>
     </div>
   )

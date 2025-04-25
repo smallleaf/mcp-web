@@ -1,7 +1,7 @@
 {
   "name": "ant-chat",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "pnpm -F web dev",
     "build": "pnpm -F web build",

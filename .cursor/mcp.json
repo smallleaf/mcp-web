@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "vite": {
-      "url": "http://localhost:5173/__mcp/sse"
+    "goodsSearch": {
+      "url": "http://localhost:8087/sse"
     }
   }
 }
